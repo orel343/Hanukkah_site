@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanukkah&display=swap');
+
+:root {
+    --primary-blue: #1a237e;
+    --secondary-blue: #3949ab;
+    --accent-yellow: #ffd54f;
+    --text-white: #ffffff;
+    --background-light: #e8eaf6;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-light);
+    color: var(--primary-blue);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--primary-blue);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Hanukkah', cursive;
+    font-size: 3em;
+    color: var(--accent-yellow);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'Hanukkah', cursive;
+    color: var(--secondary-blue);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-yellow);
+}
+
+section {
+    background-color: var(--text-white);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#menorah {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.candle {
+    width: 20px;
+    height: 100px;
+    background-color: #b0bec5;
+    margin: 0 10px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.candle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50% 50% 0 0;
+}
+
+.candle.lit {
+    background-color: var(--accent-yellow);
+}
+
+.candle.lit::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    filter: blur(4px);
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+.shamash {
+    height: 120px;
+}
+
+#dreidel {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+.side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent-yellow);
+    border: 2px solid var(--primary-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+#nun { transform: rotateY(0deg) translateZ(50px); }
+#gimel { transform: rotateY(90deg) translateZ(50px); }
+#hey { transform: rotateY(180deg) translateZ(50px); }
+#shin { transform: rotateY(-90deg) translateZ(50px); }
+
+#facts-carousel {
+    background-color: var(--secondary-blue);
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#fact {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hanukkah-countdown {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--primary-blue);
+}
+
+.recipe {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.recipe-image {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.recipe-content {
+    flex: 1;
+}
+
+#game-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#players, #pot {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#puzzle-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+    border-radius: 10px;
+}

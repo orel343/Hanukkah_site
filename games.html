@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanukkah Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button_.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="next_button.css">
+    <link rel="stylesheet" href="card.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+          <p class="para">
+            <div id="language-selector">
+                <button id="language-toggle" class="Language_btn">Language / שפה / Язык</button>
+                <div id="language-options" class="divsss">
+                    <button data-lang="he" class="btn_ee">עברית</button>
+                    <button data-lang="en" class="btn_ee">English</button>
+                    <button data-lang="ru" class="btn_ee">Русский</button>
+                </div>
+            </div>
+          </p>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1 id="title" data-he="משחקי חנוכה" data-en="Hanukkah Games" data-ru="Игры Хануки">משחקי חנוכה</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-he="דף הבית" data-en="Home" data-ru="Главная">דף הבית</a></li>
+                    <li><a href="recipes.html" data-he="מתכונים" data-en="Recipes" data-ru="Рецепты">מתכונים</a></li>
+                    <li><a href="games.html" data-he="משחקים" data-en="Games" data-ru="Игры">משחקים</a></li>
+                    <li><a href="traditions.html" data-he="מסורות" data-en="Traditions" data-ru="Традиции">מסורות</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="menorah-puzzle">
+                <h2 data-he="פאזל חנוכייה" data-en="Menorah Puzzle" data-ru="Головоломка меноры">פאזל חנוכייה</h2>
+                <div id="puzzle-container">
+                    <canvas id="puzzle-canvas"></canvas>
+                </div>
+                <p id="puzzle-message" data-he="השלם את הפאזל על ידי גרירת החלקים למקומם" data-en="Complete the puzzle by dragging the pieces into place" data-ru="Завершите головоломку, перетаскивая части на место">השלם את הפאזל על ידי גרירת החלקים למקומם</p>
+            </section>
+            <section id="dreidel-game">
+                <h2 data-he="משחק סביבון" data-en="Dreidel Game" data-ru="Игра в дрейдл">משחק סביבון</h2>
+                <div id="dreidel-container">
+                    <canvas id="dreidel-canvas"></canvas>
+                </div>
+                <button id="spin-dreidel" class="btn-31">
+                    <span class="text-container">
+                        <span class="text" data-he="סובב" data-en="Spin" data-ru="Крутить">סובב</span>
+                    </span>
+                </button>
+                <p id="dreidel-result"></p>
+                <p id="points-display" data-he="נקודות: 0" data-en="Points: 0" data-ru="Очки: 0">נקודות: 0</p>
+            </section>
+        </main>
+        <footer>
+            <p data-he="&copy; חגיגת חנוכה 2024. כֹּל הַזְכוּיוֹת שְׁמוּרוֹת." 
+               data-en="&copy; Hanukkah Celebration 2024. All rights reserved." 
+               data-ru="&copy; Празднование Хануки 2024. Все права защищены.">&copy; חגיגת חנוכה 2024. כֹּל הַזְכוּיוֹת שְׁמוּרוֹת.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>
